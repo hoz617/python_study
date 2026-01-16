@@ -1,5 +1,54 @@
+# 260116_python_study
+()는 튜플, []은 리스트
+endswith, startswith 끝나는 것,시작하는 것을 판별하는 함수.
+이 함수에 여러개의 값을 넣을 때는 리스트가 아닌 튜플로 넣어야한다.
+
+```pyton
+words = ["apple", "banana", "avocado", "berry"]
+for i in words:
+    if i.startswith(("a","b")):
+        print(i)
+```
+
+```python
+log = "ERROR_2024_01.txt"
+print(log.startswith(("ERROR","WARNING")) and log.endswith((".txt",".log"))
+)
+```
+
+```python
+names = ["Kim", "Lee", "Park", "Choi"]
+result = []
+for i in names:
+    if i.startswith(("M","K")):
+        result.append(i)
+print(result)
+```
+
+def는 함수를 지정하고
+지정한 함수 이름을 입력하면 호출이 된것이다.
+지정하기전에 입력하면 에러가 난다~
+
+```python
+def print_coin():
+    print("비트코인")
+
+
+def print_coins():
+    for i in range(100):
+        print("비트코인")
+```
+
+
+
 # 260114_python_study
-+=, -=,*= 누적계산
+> +=, -=,*= 누적계산
+>    > range는 for i 의 i에 숫자의 값을 가지게 함.
+>    >range() 괄호 안 기본값은 stop(끝나는 위치)
+>    >stop은 0- 2자리까지 나타내고 싶으면 +1해서 3으로 지정해야함(인덱스로 나타내는 것이기 때문)
+>    >문자열 인덱싱 할때랑 마찬가지로.
+>    >len() 은 리스트의 길이로 처음부터 끝까지를 나타내야할때 쓴다
+>    >range가 없는 그냥 for문은 리스트안의 값을 그대로 가진다. (숫자가 아니라)
 
 ```python
 a = ["I", "study", "python", "language", "!"]
