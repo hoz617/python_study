@@ -1,3 +1,77 @@
+# 260119_python_study
+```pyton
+user= int(input())
+def print_upper_price(user) :
+    print(user * 1.3)
+
+print_upper_price(user)
+```
+
+별표현식 별에서부터 끝까지.
+```pyton
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+*valid_score,a,b = scores
+
+
+a,b,*valid_score = scores
+
+a,*valid_score,b = scores
+```
+
+key, value 로 정해져 있는 딕셔너리.
+중괄호{}로 나타낸다.
+딕셔너리 값을 추가할려면 ice["죠스바"] = 1200 이런식으로~
+
+```pyton
+ice = {"메로나": 1000, "폴라포": 1200, "빵빠레": 1800}
+ice["죠스바"] = 1200
+ice["월드콘"] = 1500
+print(ice)
+```
+
+
+keys() 메서드. 키값만 출력된다.
+
+```pyton
+inventory = {"메로나" : [300,20], "비비빅" : [400,3], "죠스바": [250,100]}
+inventory["월드콘"]= [500,7]
+print(list(inventory.keys()))
+```
+
+values 메서드. 밸류 값만 출력된다.
+
+딕셔너리 update 메서드
+
+```pyton
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {'팥빙수':2700, '아맛나':1000}
+icecream.update(new_product)
+print (icecream)
+```
+
+
+
+```pyton
+def print_value_by_key(my_dict, key):
+    print(my_dict[key])
+
+
+
+my_dict = {"10/26" : [100, 130, 100, 100],
+           "10/27" : [10, 12, 10, 11]}
+
+
+
+print_value_by_key  (my_dict, "10/26")
+```
+
+```pyton
+print_5xn(line):
+    chunk_num = int(len(line) / 5)
+    for x in range(chunk_num + 1) :
+        print(line[x * 5: x * 5 + 5])
+
+
 # 260116_python_study
 ()는 튜플, []은 리스트
 endswith, startswith 끝나는 것,시작하는 것을 판별하는 함수.
