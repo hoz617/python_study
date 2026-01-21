@@ -1,3 +1,88 @@
+# 260121_python_study
+
+return= 반환해주는 함수.
+
+```python
+def print_reverse(str_val):
+    return str_val[::-1]
+
+print(print_reverse("python"))
+```
+
+```python
+def print_score(list_val):
+    return sum(list_val)/len(list_val)
+
+a= [1,2,3]
+
+
+print(print_score(a)) #프린트할때 한번 더 받아줘야한다. 지금 이코드에서는 printscore(a)가 결과값을 가지고 있는것.
+```
+
+```python
+def printa(a):
+    if a%2 == 0:
+        return True
+    else:
+        return False
+
+a= int(input())
+
+print(printa(a))
+```
+
+```python
+def print_sum(list_1):
+    hab = 0
+    for i in range(len(list_1)):
+        hab += list_1[i]
+    return hab
+    
+print(print_sum([1,2,3,4,5]))
+```
+
+```python
+def print_sum(list_1):
+    hab = 0
+    for i in list_1:
+        hab += i
+    return hab
+    
+print(print_sum([1,2,3,4,5]))
+```
+
+```python
+def print_sum(a,b):
+
+    if a>b:
+        hap=0
+        for i in range(b,a+1):
+            hap += i
+        print(hap)
+    
+    
+    else:
+        hap=0
+        for i in range(a,b+1):
+            hap += i
+        print(hap)
+        
+    
+print_sum(6,1)
+```
+
+```python
+def print_sum(a,b):
+    c=0
+    for i in a:
+        if i == b:
+            c += 1
+    return c
+    
+    
+print(print_sum("abcdb","b"))
+```
+
 # 260119_python_study
 ```pyton
 user= int(input())
@@ -70,9 +155,11 @@ print_5xn(line):
     chunk_num = int(len(line) / 5)
     for x in range(chunk_num + 1) :
         print(line[x * 5: x * 5 + 5])
-
+```
 
 # 260116_python_study
+
+
 ()는 튜플, []은 리스트
 endswith, startswith 끝나는 것,시작하는 것을 판별하는 함수.
 이 함수에 여러개의 값을 넣을 때는 리스트가 아닌 튜플로 넣어야한다.
