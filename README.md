@@ -1,3 +1,140 @@
+# 260123_python_study
+
+```python
+class Human:
+    def __init__(self, name):
+        self.name = name
+
+areum = Human("아름")
+print(areum.name)
+
+hangyeol = Human("한결")
+print(hangyeol.name)
+```
+
+
+```python
+class Human:
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+    def __del__(self):
+        print("나의 죽음을 알리지마라")
+    
+
+    def who(self):
+        print("이름: {} 나이: {} 성별: {}".format(self.name, self.age,self.sex))  #format 매서드 중괄호 안에 값을 넣어줌.
+
+    def setInfo(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex= sex
+
+
+class Human1:
+    def __init__(self):
+        pass
+
+    def setName(self, name):
+        self.name = name  # 이 방법을 더 많이 씀.
+    def setAge(self, age):
+        self.age = age #설정해주는 것
+
+    def getName(self):
+        print(self.name)  # 가져오는 것. set 함수 없으면 못씀.
+       
+    def who(self):
+        print("이름: {} ".format(self.name))
+
+
+
+areum = Human("아름", 25, "여자")
+areum.who()
+
+han = Human1()
+han.setName("김한결")
+han.getName()
+```
+
+
+```python
+class Stock:
+    def __init__(self, name, code,per,pbr, 배당수익률):
+        self.name = name
+        self.code = code
+        self.per = per
+        self.pbr = pbr
+        self.배당수익률 = 배당수익률
+
+    def set_name(self, name):
+        self.name = name  #새터 개터 라고 불리는 걸로 새터는 정보를 설정해주는것
+
+    def set_code(self, code):
+        self.code = code
+
+    def get_name(self):
+        return self.name
+
+    def get_code(self):
+        return self.code
+
+    def set_per(self, per):
+        self.per = per
+
+    def set_pbr(self, pbr):
+        self.pbr = pbr
+
+    def set_dividend(self, dividend):
+        self.dividend =dividend
+
+삼성 = Stock("삼성전자", "005930", 15.79,1.33,2.83)
+삼성.set_per(12.75)
+print(삼성.per)
+
+
+종목 = [] #종목을 리스트로 저장하고
+
+삼성 = Stock("삼성전자", "005930", 15.79, 1.33, 2.83)
+현대차 = Stock("현대차", "005380", 8.70, 0.35, 4.27)
+LG전자 = Stock("LG전자", "066570", 317.34, 0.69, 1.37)
+
+종목.append(삼성) #종목 리스트에 객체를 집어넣는다
+종목.append(현대차)
+종목.append(LG전자)
+
+for i in 종목:
+    print(i.code, i.per) #반복문으로 코드, 퍼센트를 각각 다 출력하기
+```
+
+```python
+class 차:
+    def __init__(self, 바퀴, 가격):
+        self.바퀴 = 바퀴
+        self.가격 = 가격
+
+    def 정보(self):
+        print("바퀴수 ", self.바퀴)  # 정보를 바꿀 수 있는 함수 설정
+        print("가격 ", self.가격)
+
+class 자동차(차):
+    def __init__(self, 바퀴, 가격):
+        super().__init__(바퀴, 가격) #부모 클래스 불러오기
+
+class 자전차(차):
+    def __init__(self, 바퀴, 가격, 구동계):
+        super().__init__(바퀴, 가격) #부모클래스 불러오기
+        self.구동계 = 구동계 #부모인 차에 구동계 없으니까 구동계 정보 설정해주는 것 추가
+
+    def 정보(self):
+        super().정보()
+        print("구동계 ", self.구동계)
+
+bicycle = 자전차(2, 100, "시마노")
+bicycle.정보()
+```
+
+
 # 260121_python_study
 
 return= 반환해주는 함수.
