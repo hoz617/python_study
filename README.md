@@ -1,3 +1,90 @@
+# 260126_python_study
+
+```python
+def print_nm(N,M):
+    return N+M
+
+def print_mn(N,M):
+    if M>N:
+        return M-N
+    else:
+        return N-M
+        
+
+print("두 수의 합 = ", print_nm(2,4))
+print("두 수의 차 = ", print_mn(2,4))
+```
+
+```python
+def print_y(n):
+    if n<0:
+        return "negative"
+    elif n>0:
+        return "positive"
+    else:
+        return "zero"
+
+
+print(print_y(5))
+```
+
+```python
+def print_2(n,m,z):
+    return 4*n+2*m+z
+
+def print_3(n,m,z):
+    return 9*n+3*m+z
+
+def print_5(n,m,z):
+    return 25*n+5*m+z
+
+print(print_2(100,10,1))
+print(print_3(100,10,1))
+print(print_5(100,10,1))
+```
+
+```python
+def print_nm(): #전역 변수 지역변수를 활용하는 것
+    global a,b #전역변수에서 가지고 오기
+    if a>b: #지역변수에서 값 수정해주기
+        a= a/2
+        b=b*2
+    else:
+        b = b / 2
+        a = a * 2
+
+
+a =0
+b =0
+
+a,b = map(int,input().split())
+
+print_nm() #지역변수 호출해서 전역변수 a,b 수정해주기
+print(a,b) # 수정된 a,b 출력
+```
+
+```python
+def print_nm(n):
+    hap=0
+    for i in range(1,n+1):
+        hap += i
+    print(hap)
+
+
+print_nm(100)
+```
+
+```python
+def print_nm(n):
+    result=1
+    for i in range(n):
+        result *= 2
+    return result
+
+print(print_nm(10))
+```
+
+
 # 260123_python_study
 
 ```python
@@ -133,6 +220,28 @@ class 자전차(차):
 bicycle = 자전차(2, 100, "시마노")
 bicycle.정보()
 ```
+
+
+N, M = map(int, input().split())  #맵을 쓰는방법
+
+
+
+def print_nm(N,M):
+
+    for i in range(N):
+        print("Hello")
+
+    print()
+
+    for i in range(M):
+        print("Hello")
+
+
+print_nm(3,2)
+
+
+
+
 
 
 # 260121_python_study
